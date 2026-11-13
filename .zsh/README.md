@@ -44,7 +44,7 @@ cp ~/.zshrc.local.example ~/.zshrc.local
   06-zoxide.zsh             # zoxide (cd replacement)
   07-tools.zsh              # fnm, Angular CLI
   08-aliases.zsh            # all aliases
-  09-functions.zsh          # mcd, tms, vault-me, code-spring…
+  09-functions.zsh          # mcd, tms, code-spring…
   10-keybindings.zsh        # Ctrl+F directory picker
   11-conda.zsh              # conda init
 ```

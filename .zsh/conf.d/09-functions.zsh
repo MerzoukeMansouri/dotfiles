@@ -26,28 +26,3 @@ code-spring() {
     "$project_path"
 }
 
-vault-me() {
-  local ns="${1:-org/team-a}"
-  local addr="https://vault.example.com/"
-
-  if ! vault token lookup -address="$addr" -namespace="$ns" > /dev/null 2>&1; then
-    vault login -method=oidc -namespace="$ns" -address="$addr" skip_browser=true || return 1
-  fi
-
-  [[ -f ~/.vault-token ]] && pbcopy < ~/.vault-token
-  echo "VAULT_TOKEN=$(<~/.vault-token)" > ~/.env-spring
-  open "https://vault-ui.example.com/config?token=$(cat ~/.vault-token)&url=$addr&namespace=$ns"
-}
-
-nvault-me() {
-  local ns="${1:-org/team-b}"
-  local addr="https://vault-nprd.example.com"
-
-  if ! vault token lookup -address="$addr" -namespace="$ns" > /dev/null 2>&1; then
-    vault login -method=oidc -namespace="$ns" -address="$addr" skip_browser=true || return 1
-  fi
-
-  [[ -f ~/.vault-token ]] && pbcopy < ~/.vault-token
-  echo "VAULT_TOKEN=$(<~/.vault-token)" > ~/.env-spring
-  echo "✓ Logged in to namespace: $ns"
-}

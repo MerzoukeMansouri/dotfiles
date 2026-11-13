@@ -1,5 +1,8 @@
 # Copy this to ~/.zshrc.local and fill in real values
-# ~/.zshrc.local is gitignored — never commit secrets
+# ~/.zshrc.local is never added to the repo — keep secrets, hosts and work-specific functions there
 
 # export CLAUDE_CODE_OAUTH_TOKEN=sk-ant-oat01-...
 # export SOME_API_KEY=...
+
+# Machine/work-specific aliases and functions also belong here, e.g.:
+# alias ssh-myvps='ssh -i ~/.ssh/my_key user@my-vps'

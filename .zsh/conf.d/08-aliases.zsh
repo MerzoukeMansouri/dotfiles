@@ -17,9 +17,6 @@ alias lg='lazygit'
 alias ghw='gh repo view --web'
 alias idea='open -a "/Applications/IntelliJ IDEA.app"'
 alias clode='ollama launch claude'
-alias ssh-vps='ssh -i ~/.ssh/my_key root@my-vps.example.com'
-alias ssh-host-a='ssh user@host-a'
-alias ssh-host-b='ssh host-b'
 alias git-clean="git branch | grep -vE '^\*|main|develop' | xargs -n 1 git branch -D"
 alias oc='opencode run "use caveman ultra mode"'
 
